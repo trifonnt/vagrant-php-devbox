@@ -25,7 +25,7 @@ apt-get -y install mc wget
 ln -fs /usr/share/zoneinfo/Europe/Sofia /etc/localtime
 dpkg-reconfigure -f noninteractive tzdata
 
-# Install Java 8
+# Install Oracle Java 8
 echo 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /etc/apt/sources.list
 echo 'deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /etc/apt/sources.list
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886
@@ -68,8 +68,16 @@ apt-get upgrade
 
 apt install -y ubuntu-make
 
-# Install PHP Storm Edtor
-su -c 'umake ide phpstorm /home/vagrant/.local/share/umake/ide/phpstorm' vagrant
+# Install PHP Storm Edtor(It is PAID application)
+# su -c 'umake ide phpstorm /home/vagrant/.local/share/umake/ide/phpstorm' vagrant
+
+# Install Eclipse PHP
+curl -L http://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/neon/2/eclipse-php-neon-2-linux-gtk-x86_64.tar.gz > /tmp/eclipse-php-neon-2-linux-gtk-x86_64.tar.gz
+mkdir /home/vagrant/.local/share/umake/ide/eclipse-php -p
+tar -zxvf /tmp/eclipse-php*.tar.gz -C /home/vagrant/.local/share/umake/ide/eclipse-php --strip-components=1
+rm /tmp/eclipse-php-neon-2-linux-gtk-x86_64.tar.gz
+chown -R vagrant:vagrant /home/vagrant/.local/share/umake/ide/eclipse-php
+
 
 # Install Chromium Browser
 apt-get install -y chromium-browser
