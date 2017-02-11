@@ -70,7 +70,7 @@ apt install -y ubuntu-make
 
 # Install XDebug
 # - http://purencool.com/installing-xdebug-on-ubuntu
-apt-get install -y apache2 php5-xdebug
+apt-get install -y apache2 php-xdebug
 # Configure XDebug in Apache
 read -d '' php_config <<- EOF
 # Trifon
