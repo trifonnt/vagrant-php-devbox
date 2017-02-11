@@ -93,6 +93,8 @@ curl -L http://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/neon/
 mkdir /home/vagrant/.local/share/umake/ide/eclipse-php -p
 tar -zxvf /tmp/eclipse-php*.tar.gz -C /home/vagrant/.local/share/umake/ide/eclipse-php --strip-components=1
 rm /tmp/eclipse-php-neon-2-linux-gtk-x86_64.tar.gz
+
+chown -R vagrant:vagrant /home/vagrant/.local/
 chown -R vagrant:vagrant /home/vagrant/.local/share/umake/ide/eclipse-php
 su -c 'desktop-file-install /vagrant/eclipse_php.desktop' vagrant
 
