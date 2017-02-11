@@ -71,16 +71,17 @@ apt install -y ubuntu-make
 # Install XDebug
 # - http://purencool.com/installing-xdebug-on-ubuntu
 apt-get install -y apache2 php php-xdebug
+
 # Configure XDebug in Apache
-read -d '' php_config <<- EOF
-# Trifon
-# Added for xdebug
-zend_extension="/usr/lib/php/20151012/xdebug.so"
-xdebug.remote_enable=1
-xdebug.remote_handler=dbgp xdebug.remote_mode=req
-xdebug.remote_host=127.0.0.1 xdebug.remote_port=9000
-EOF 
-echo "$php_config" >> /etc/php5/apache2/php.ini
+#read -d '' php_config <<- EOF
+## Trifon
+## Added for xdebug
+#zend_extension="/usr/lib/php/20151012/xdebug.so"
+#xdebug.remote_enable=1
+#xdebug.remote_handler=dbgp xdebug.remote_mode=req
+#xdebug.remote_host=127.0.0.1 xdebug.remote_port=9000
+#EOF 
+#echo "$php_config" >> /etc/php5/apache2/php.ini
 
 service apache2 restart
 
