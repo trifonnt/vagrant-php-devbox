@@ -68,6 +68,9 @@ apt-get upgrade
 
 apt install -y ubuntu-make
 
+# Install PHP Storm Edtor
+su -c 'umake ide phpstorm /home/vagrant/.local/share/umake/ide/phpstorm' vagrant
+
 # Install Chromium Browser
 apt-get install -y chromium-browser
 
