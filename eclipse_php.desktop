@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Eclipse PHP
+Type=Application
+Exec=/home/vagrant/.local/share/umake/ide/eclipse-php/eclipse
+Terminal=false
+Icon=/home/vagrant/.local/share/umake/ide/eclipse-php/icon.xpm
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE;
+Name[en]=Eclipse PHP
+StartupWMClass=Eclipse_PHP
