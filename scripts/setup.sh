@@ -60,8 +60,7 @@ apt-get remove -y light-locker --purge
 # Install the development tools
 ################################################################################
 
-# install Ubuntu Make - see https://wiki.ubuntu.com/ubuntu-make
-
+# Install Ubuntu Make - see https://wiki.ubuntu.com/ubuntu-make
 add-apt-repository -y ppa:ubuntu-desktop/ubuntu-make
 
 apt-get update
@@ -69,13 +68,13 @@ apt-get upgrade
 
 apt install -y ubuntu-make
 
-# install Chromium Browser
+# Install Chromium Browser
 apt-get install -y chromium-browser
 
-# install MySQL Workbench
+# Install MySQL Workbench
 apt-get install -y mysql-workbench
 
-# install PgAdmin
+# Install PgAdmin
 apt-get install -y pgadmin3
 
 # Increase Inotify limit (see https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit)
