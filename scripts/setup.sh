@@ -75,7 +75,7 @@ apt-get install -y apache2 php php-xdebug
 read -d '' php_config <<- EOF
 # Trifon
 # Added for xdebug
-zend_extension="/usr/lib/php5/20100525/xdebug.so"
+zend_extension="/usr/lib/php/20151012/xdebug.so"
 xdebug.remote_enable=1
 xdebug.remote_handler=dbgp xdebug.remote_mode=req
 xdebug.remote_host=127.0.0.1 xdebug.remote_port=9000
