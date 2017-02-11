@@ -72,11 +72,13 @@ apt install -y ubuntu-make
 # su -c 'umake ide phpstorm /home/vagrant/.local/share/umake/ide/phpstorm' vagrant
 
 # Install Eclipse PHP
+# - http://askubuntu.com/questions/603076/how-to-install-eclipse-php-in-ubuntu-14-04
 curl -L http://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/neon/2/eclipse-php-neon-2-linux-gtk-x86_64.tar.gz > /tmp/eclipse-php-neon-2-linux-gtk-x86_64.tar.gz
 mkdir /home/vagrant/.local/share/umake/ide/eclipse-php -p
 tar -zxvf /tmp/eclipse-php*.tar.gz -C /home/vagrant/.local/share/umake/ide/eclipse-php --strip-components=1
 rm /tmp/eclipse-php-neon-2-linux-gtk-x86_64.tar.gz
 chown -R vagrant:vagrant /home/vagrant/.local/share/umake/ide/eclipse-php
+su -c 'desktop-file-install /vagrant/eclipse_php.desktop' vagrant
 
 
 # Install Chromium Browser
