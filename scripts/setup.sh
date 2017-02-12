@@ -84,6 +84,7 @@ apt-get install -y php php-xdebug php-mcrypt php-mysql php-cli apache2 libapache
 #echo "$php_config" >> /etc/php5/apache2/php.ini
 
 echo 'xdebug.remote_enable = 1' >> /etc/php/7.0/apache2/php.ini
+chown vagrant: /var/www/ -R
 
 service apache2 restart
 
