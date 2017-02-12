@@ -83,6 +83,8 @@ apt-get install -y php php-xdebug php-mcrypt php-mysql php-cli apache2 libapache
 #EOF 
 #echo "$php_config" >> /etc/php5/apache2/php.ini
 
+echo 'xdebug.remote_enable = 1' >> /etc/php/7.0/apache2/php.ini
+
 service apache2 restart
 
 # Install PHP Storm Edtor(It is PAID application)
