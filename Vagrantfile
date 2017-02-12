@@ -12,8 +12,9 @@ Vagrant.configure("2") do |config|
 	config.vm.network :forwarded_port, host: 8080, guest: 8080
 	config.vm.network :forwarded_port, host: 9000, guest: 9000
 
-	# Set the Timezone to Europe/Sofia
-	config.vm.provision :shell, :inline => "echo \"Europe/Sofia\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
+	# Set the Timezone to Europe/Sofia -- Have to test which one is working!
+#	config.vm.provision :shell, :inline => "echo \"Europe/Sofia\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
+	config.vm.provision :shell, :inline => "sudo ln -fs /usr/share/zoneinfo/Europe/Sofia /etc/localtime && dpkg-reconfigure -f noninteractive tzdata"
 
 	config.vm.provider :virtualbox do |vb|
 		vb.gui = true
