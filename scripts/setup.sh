@@ -68,7 +68,7 @@ apt-get upgrade
 
 apt install -y ubuntu-make
 
-# Install XDebug
+# Install PHP and XDebug
 # - http://purencool.com/installing-xdebug-on-ubuntu
 apt-get install -y php php-xdebug php-mcrypt php-mysql php-cli apache2 libapache2-mod-php
 
@@ -101,6 +101,12 @@ rm /tmp/eclipse-php-neon-2-linux-gtk-x86_64.tar.gz
 chown -R vagrant:vagrant /home/vagrant/.local/
 chown -R vagrant:vagrant /home/vagrant/.local/share/umake/ide/eclipse-php
 su -c 'desktop-file-install /vagrant/eclipse_php.desktop' vagrant
+
+
+# Install SCM systems
+apt-get install -y git subversion libsvn-java
+## Set LD_LIBRARY_PATH
+echo "-Djava.library.path=/usr/lib/x86_64-linux-gnu/jni" >> /home/vagrant/.local/share/umake/ide/eclipse-php/eclipse.ini
 
 
 # Install Chromium Browser
